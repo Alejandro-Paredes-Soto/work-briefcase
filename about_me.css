@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100&display=swap');
+
+
+*{
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+a{
+    text-decoration: none !important;
+}
+
+ul{
+    list-style: none !important;
+}
+
+html,body{
+    width: 100% !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+.container{
+
+    width: 100%;
+    min-height: 100vh;
+    background: url('./assets/fondo-form.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.info-container{
+    width: 500px;
+    height: 500px;
+    background: none;
+    border-radius: 7px;
+    position: relative;
+}
+
+.info-container .box1{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient( lightblue, #fff);
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    box-shadow: 0px 0px 50px #cdcdcd;
+    z-index: 100;
+    filter: blur(3px);
+}
+
+.info-container .box2{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(#cdcdcd, #fff);
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    box-shadow: 0px 0px 10px black;
+    z-index: 120;
+    filter: blur(5px);
+}
+
+.info-container .box3{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(blue,#fff);
+    position: absolute;
+    bottom: 40px;
+    right: 110px;
+    box-shadow: 0px 0px 10px black;
+    z-index: 122;
+    filter: blur(5px);
+}
+
+.info-container .info-about{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.info-container .info-about .photo{
+
+    width: 40%;
+    height: 40%;
+}
+.info-container .info-about .personal{
+    width: 60%;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.info-container .info-about .personal::-webkit-scrollbar{
+    width: 20px;
+   
+}
+
+.info-container .info-about .personal::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #2E5EF4;
+    
+}
+
+.info-container .info-about.personal::-webkit-scrollbar-track{
+    box-shadow: 0px 0px 5px #fff;
+}
+
+
+
+.info-container .info-about .personal .name{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #fff;
+
+    
+}
+
+
+.info-container .info-about .personal .name h6{
+    font-family: 'Big Shoulders Stencil Display';
+    text-shadow: 0px 0px 2px #cdcdcd;
+    color: #2E5EF4;
+    font-size: 38px;
+    font-weight: bold;
+    animation: mover 900ms linear infinite;
+    
+}
+
+@keyframes mover {
+    0%{transform: rotateZ(0deg);}
+    50%{transform: rotateZ(21deg);}
+    100%{transform: rotateZ(0deg);}
+    
+}
+
+.info-container .info-about .personal .name span{
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.info-container .info-about .personal .name img{
+    width: 55px;
+    height: 55px;
+    margin-top: 15px;
+}
+
+
+
+.btn-left{
+    background: none;
+    border: none;
+    outline: none;
+    position: fixed;
+    z-index: 1500;
+    top: 30px;
+    left: 40px;
+
+}
+
+.btn-left img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    animation: regresar 900ms infinite linear;
+
+}
+
+@keyframes regresar {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(50px);}
+    100%{transform: translateX(0px);}
+    
+}
+
+
+
+@media (max-width: 534px){
+    .info-container .info-about {
+        width: 350px;
+        position: absolute;
+        left: 20%;
+
+    }
+}
+
+
+
+@media (max-width: 482px){
+    .info-container .info-about {
+        width: 350px;
+        position: absolute;
+        left: 12%;
+        
+
+    }
+}
+
+@media (max-width: 418px){
+
+    .info-container .box1,.box2,.box3{
+        display: none ;
+    }
+    .info-container .info-about {
+        width: 300px;
+        position: absolute;
+        left: 12%;
+        
+
+    }
+}
+
+@media (max-width: 354px){
+
+    
+    .info-container .info-about {
+        width: 300px;
+        position: absolute;
+        left: 8%;
+        
+
+    }
+}

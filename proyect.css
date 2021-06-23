@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+}
+
+html,body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background: #4d55e2;
+
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .btn-back{
+    text-decoration: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    
+}
+
+.container .btn-back img{
+    width: 60px;
+    height: 60px;
+    animation: votarB 1.2s infinite linear;
+
+}
+@keyframes votarB {
+    0%{transform: translateX(10px);}
+    50%{transform: translateX(0px);}
+    100%{transform: translateX(10px);}
+    
+}
+
+
+.card{
+    width: 400px;
+    min-height: 400px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.init{
+    width: 1000px;
+    height: 550px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+
+
+}
+
+.init .left{
+
+    width: 50%;
+    height: 550px;
+    
+}
+
+.init .left img{
+    animation: votar 2.9s infinite linear;
+
+}
+
+@keyframes votar {
+    0%{transform: translateY(15px);}
+    50%{transform: translateY(0px);}
+    100%{transform: translateY(15px);}
+    
+}
+
+
+
+.init .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.init .rigth{
+    width: 50%;
+    height: 550px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.init .rigth::-webkit-scrollbar{
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.init .rigth::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 10px;
+}
+
+
+.init .rigth  .card{
+    width: 250px;
+    min-height: 250px;
+    background: #F4F4F4;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+.init .rigth .card .todo{
+    width: 100%;
+    min-height: 250px;
+    position: relative;
+   
+    z-index: 100;
+    transition: all 400ms;
+    
+
+
+}
+
+.init .rigth  .card .todo .card-header{
+
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Paytone One';
+    color: #fff;
+    text-shadow: 0px 0px 3px #fff;
+    font-size: 35px;
+    background: linear-gradient(90deg,#575FF8, #98B7FA);
+    text-align: center;
+    padding: 10px;
+
+}
+.init .rigth .card .todo .card-body{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px !important;
+
+    font-family: 'Fira Sans Extra Condensed';
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+@media (max-width: 1197px){
+
+
+    .container .init{
+        width: 850px;
+    }
+
+}
+
+
+@media (max-width: 1015px){
+
+
+    .container .init{
+        width: 700px;
+    }
+
+}
+
+@media (max-width: 857px){
+
+
+    .container .init{
+        width: 700px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .init .left{
+        width: 100%;
+        height: 250px;
+        padding: 15px;
+    }
+
+    .container .init .rigth{
+        width: 100%;
+        height: 250px;
+    }
+
+}
+
+
+@media (max-width: 832px){
+
+
+    .container .init{
+        width: 500px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+
+}
+
+
+@media (max-width: 636px){
+
+
+    .container .init{
+        width: 300px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+
+}
+
+@media (max-width: 425px){
+
+.container .btn-back{
+    position: fixed;
+    top: 15px;
+    left: 40%;
+}
+
+.container .init{
+    margin-top: 50px;
+}
+   
+
+}
+
+
+@media (max-width: 316px){
+
+    .container .init{
+        width: 230px;
+    }
+}
+
